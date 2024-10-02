@@ -1,0 +1,7 @@
+datasets
+lightning
+peft
+torchmetrics
+transformers[torch]
+flask
+gunicorn

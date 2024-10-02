@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+  <title>AI-Generated Text Detector</title>
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+  <meta name="description"
+    content="Predicts whether a given text is likely to be AI-generated or human-written.">
+  <meta name="keywords"
+    content="AI, LLM, text generation, GenAI">
+</head>
+
+<body>
+
+  <main>
+
+    <section class="hero is-small">
+      <div class="columns">
+        <div class="column is-half is-offset-one-quarter">
+          <div class="hero-body">
+            <h1 class="title">AI-Generated Text Detector</h1>
+            <p>This tool was built by finetuning the DistilBERT language model on a large sample of AI-generated and human-written texts. This is an experiment and should not be relied on for critical tasks.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="columns">
+        <div class="column is-half is-offset-one-quarter">
+          <form id="detect-form"
+            action=""
+            method="post">
+            <textarea id="textinput"
+              name="textinput"
+              class="textarea"
+              rows="10"
+              placeholder="Paste your text here..."></textarea>
+            <input type="button"
+              name="detectbutton"
+              value="Submit"
+              class="button is-fullwidth is-primary"
+              onClick="modelPredict(this.form)" />
+          </form>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="section">
+      <div class="columns">
+        <div class="column is-half is-offset-one-quarter">
+          <div id="result"></div>
+        </div>
+      </div>
+
+    </section>
+
+    <footer class="footer">
+      <div class="columns">
+        <div class="column is-half is-offset-one-quarter">
+          <div class="content has-text-centered">
+            <p>View the source code on <a href="https://github.com/hrbn/ai-text-detect"
+                target="_blank">GitHub</a></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+  <script src="/static/script.js"></script>
+</body>
+
+</html>
