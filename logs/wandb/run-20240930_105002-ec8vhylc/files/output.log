@@ -1,0 +1,91 @@
+Casting to class labels: 100%|██████████████████████████████████████████████████████████████████████████████████████████| 10000/10000 [00:00<00:00, 321587.43 examples/s]
+Map:   0%|                                                                                                                               | 0/8000 [00:00<?, ? examples/s]/Users/justn/Library/Caches/pypoetry/virtualenvs/genai-detect-distilroberta-ZN1zM0B8-py3.11/lib/python3.11/site-packages/transformers/tokenization_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+Map: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 8000/8000 [00:07<00:00, 1015.68 examples/s]
+Map: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2000/2000 [00:02<00:00, 980.07 examples/s]
+/Users/justn/Library/Caches/pypoetry/virtualenvs/genai-detect-distilroberta-ZN1zM0B8-py3.11/lib/python3.11/site-packages/lightning/pytorch/callbacks/model_checkpoint.py:654: Checkpoint directory /Users/justn/genai-detect-distilroberta/checkpoints exists and is not empty.
+
+  | Name          | Type                               | Params | Mode
+-----------------------------------------------------------------------------
+0 | model         | PeftModelForSequenceClassification | 82.8 M | train
+1 | metrics       | MetricCollection                   | 0      | train
+2 | train_metrics | MetricCollection                   | 0      | train
+3 | valid_metrics | MetricCollection                   | 0      | train
+4 | test_metrics  | MetricCollection                   | 0      | train
+-----------------------------------------------------------------------------
+665 K     Trainable params
+82.1 M    Non-trainable params
+82.8 M    Total params
+331.143   Total estimated model params size (MB)
+144       Modules in train mode
+126       Modules in eval mode
+Sanity Checking DataLoader 0:   0%|                                                                                                                | 0/2 [00:00<?, ?it/s]
+/Users/justn/Library/Caches/pypoetry/virtualenvs/genai-detect-distilroberta-ZN1zM0B8-py3.11/lib/python3.11/site-packages/torch/amp/autocast_mode.py:265: UserWarning: User provided device_type of 'cuda', but CUDA is not available. Disabling
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/justn/Library/Caches/pypoetry/virtualenvs/genai-detect-distilroberta-ZN1zM0B8-py3.11/lib/python3.11/site-packages/torchmetrics/metric.py", line 483, in wrapped_func
+    update(*args, **kwargs)
+  File "/Users/justn/Library/Caches/pypoetry/virtualenvs/genai-detect-distilroberta-ZN1zM0B8-py3.11/lib/python3.11/site-packages/torchmetrics/classification/stat_scores.py", line 190, in update
+    self._update_state(tp, fp, tn, fn)
+  File "/Users/justn/Library/Caches/pypoetry/virtualenvs/genai-detect-distilroberta-ZN1zM0B8-py3.11/lib/python3.11/site-packages/torchmetrics/classification/stat_scores.py", line 77, in _update_state
+    self.tp += tp
+RuntimeError: Expected all tensors to be on the same device, but found at least two devices, mps:0 and cpu!
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/justn/genai-detect-distilroberta/trainer.py", line 151, in <module>
+    CLI(train, as_positional=False)
+  File "/Users/justn/Library/Caches/pypoetry/virtualenvs/genai-detect-distilroberta-ZN1zM0B8-py3.11/lib/python3.11/site-packages/jsonargparse/_cli.py", line 96, in CLI
+    return _run_component(components, init)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/justn/Library/Caches/pypoetry/virtualenvs/genai-detect-distilroberta-ZN1zM0B8-py3.11/lib/python3.11/site-packages/jsonargparse/_cli.py", line 204, in _run_component
+    return component(**cfg)
+           ^^^^^^^^^^^^^^^^
+  File "/Users/justn/genai-detect-distilroberta/trainer.py", line 138, in train
+    lit_trainer.fit(model=lit_module, datamodule=lit_datamodule)
+  File "/Users/justn/Library/Caches/pypoetry/virtualenvs/genai-detect-distilroberta-ZN1zM0B8-py3.11/lib/python3.11/site-packages/lightning/pytorch/trainer/trainer.py", line 538, in fit
+    call._call_and_handle_interrupt(
+  File "/Users/justn/Library/Caches/pypoetry/virtualenvs/genai-detect-distilroberta-ZN1zM0B8-py3.11/lib/python3.11/site-packages/lightning/pytorch/trainer/call.py", line 47, in _call_and_handle_interrupt
+    return trainer_fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/justn/Library/Caches/pypoetry/virtualenvs/genai-detect-distilroberta-ZN1zM0B8-py3.11/lib/python3.11/site-packages/lightning/pytorch/trainer/trainer.py", line 574, in _fit_impl
+    self._run(model, ckpt_path=ckpt_path)
+  File "/Users/justn/Library/Caches/pypoetry/virtualenvs/genai-detect-distilroberta-ZN1zM0B8-py3.11/lib/python3.11/site-packages/lightning/pytorch/trainer/trainer.py", line 981, in _run
+    results = self._run_stage()
+              ^^^^^^^^^^^^^^^^^
+  File "/Users/justn/Library/Caches/pypoetry/virtualenvs/genai-detect-distilroberta-ZN1zM0B8-py3.11/lib/python3.11/site-packages/lightning/pytorch/trainer/trainer.py", line 1023, in _run_stage
+    self._run_sanity_check()
+  File "/Users/justn/Library/Caches/pypoetry/virtualenvs/genai-detect-distilroberta-ZN1zM0B8-py3.11/lib/python3.11/site-packages/lightning/pytorch/trainer/trainer.py", line 1052, in _run_sanity_check
+    val_loop.run()
+  File "/Users/justn/Library/Caches/pypoetry/virtualenvs/genai-detect-distilroberta-ZN1zM0B8-py3.11/lib/python3.11/site-packages/lightning/pytorch/loops/utilities.py", line 178, in _decorator
+    return loop_run(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/justn/Library/Caches/pypoetry/virtualenvs/genai-detect-distilroberta-ZN1zM0B8-py3.11/lib/python3.11/site-packages/lightning/pytorch/loops/evaluation_loop.py", line 135, in run
+    self._evaluation_step(batch, batch_idx, dataloader_idx, dataloader_iter)
+  File "/Users/justn/Library/Caches/pypoetry/virtualenvs/genai-detect-distilroberta-ZN1zM0B8-py3.11/lib/python3.11/site-packages/lightning/pytorch/loops/evaluation_loop.py", line 396, in _evaluation_step
+    output = call._call_strategy_hook(trainer, hook_name, *step_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/justn/Library/Caches/pypoetry/virtualenvs/genai-detect-distilroberta-ZN1zM0B8-py3.11/lib/python3.11/site-packages/lightning/pytorch/trainer/call.py", line 319, in _call_strategy_hook
+    output = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/Users/justn/Library/Caches/pypoetry/virtualenvs/genai-detect-distilroberta-ZN1zM0B8-py3.11/lib/python3.11/site-packages/lightning/pytorch/strategies/strategy.py", line 411, in validation_step
+    return self.lightning_module.validation_step(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/justn/genai-detect-distilroberta/module.py", line 95, in validation_step
+    self.log("val-stat-scores", binary_stat_scores(predicted_labels, batch["label"]))
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/justn/Library/Caches/pypoetry/virtualenvs/genai-detect-distilroberta-ZN1zM0B8-py3.11/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/justn/Library/Caches/pypoetry/virtualenvs/genai-detect-distilroberta-ZN1zM0B8-py3.11/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/justn/Library/Caches/pypoetry/virtualenvs/genai-detect-distilroberta-ZN1zM0B8-py3.11/lib/python3.11/site-packages/torchmetrics/metric.py", line 312, in forward
+    self._forward_cache = self._forward_reduce_state_update(*args, **kwargs)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/justn/Library/Caches/pypoetry/virtualenvs/genai-detect-distilroberta-ZN1zM0B8-py3.11/lib/python3.11/site-packages/torchmetrics/metric.py", line 381, in _forward_reduce_state_update
+    self.update(*args, **kwargs)
+  File "/Users/justn/Library/Caches/pypoetry/virtualenvs/genai-detect-distilroberta-ZN1zM0B8-py3.11/lib/python3.11/site-packages/torchmetrics/metric.py", line 486, in wrapped_func
+    raise RuntimeError(
+RuntimeError: Encountered different devices in metric calculation (see stacktrace for details). This could be due to the metric class not being on the same device as input. Instead of `metric=BinaryStatScores(...)` try to do `metric=BinaryStatScores(...).to(device)` where device corresponds to the device of the input.

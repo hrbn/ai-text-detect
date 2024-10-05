@@ -1,0 +1,1 @@
+{"train_BinaryRecall":0.5,"train_BinaryPrecision":0.6666666865348816,"train_BinaryF1Score":0.5714285969734192,"train-loss":0.6269693970680237,"_timestamp":1.727708290853266e+09,"_step":0,"train_BinaryAccuracy":0.75,"epoch":0,"_runtime":47.828833,"trainer/global_step":49,"_wandb":{"runtime":81}}

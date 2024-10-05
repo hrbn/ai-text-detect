@@ -1,0 +1,26 @@
+Casting to class labels: 100%|██████████████████████████████████████████████████████████████████████████████████████████| 10000/10000 [00:00<00:00, 445018.99 examples/s]
+Map:   0%|                                                                                                                               | 0/8000 [00:00<?, ? examples/s]/Users/justn/Library/Caches/pypoetry/virtualenvs/genai-detect-distilroberta-ZN1zM0B8-py3.11/lib/python3.11/site-packages/transformers/tokenization_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+Map: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 8000/8000 [00:07<00:00, 1033.50 examples/s]
+Map: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2000/2000 [00:02<00:00, 955.93 examples/s]
+/Users/justn/Library/Caches/pypoetry/virtualenvs/genai-detect-distilroberta-ZN1zM0B8-py3.11/lib/python3.11/site-packages/lightning/pytorch/callbacks/model_checkpoint.py:654: Checkpoint directory /Users/justn/genai-detect-distilroberta/checkpoints exists and is not empty.
+
+  | Name          | Type                               | Params | Mode
+-----------------------------------------------------------------------------
+0 | model         | PeftModelForSequenceClassification | 82.8 M | train
+1 | metrics       | MetricCollection                   | 0      | train
+2 | train_metrics | MetricCollection                   | 0      | train
+3 | valid_metrics | MetricCollection                   | 0      | train
+4 | test_metrics  | MetricCollection                   | 0      | train
+-----------------------------------------------------------------------------
+665 K     Trainable params
+82.1 M    Non-trainable params
+82.8 M    Total params
+331.143   Total estimated model params size (MB)
+144       Modules in train mode
+126       Modules in eval mode
+Epoch 4: 100%|█| 667/667 [41:28<00:00,  0.27it/s, v_num=au9e, train_BinaryAccuracy=0.875, train_BinaryF1Score=0.909, train_BinaryPrecision=0.833, train_BinaryRecall=1.00
+/Users/justn/Library/Caches/pypoetry/virtualenvs/genai-detect-distilroberta-ZN1zM0B8-py3.11/lib/python3.11/site-packages/torch/amp/autocast_mode.py:265: UserWarning: User provided device_type of 'cuda', but CUDA is not available. Disabling
+  warnings.warn(
+                                                                                                                                                                         
+`Trainer.fit` stopped: `max_epochs=5` reached.

@@ -1,0 +1,26 @@
+Casting to class labels: 100%|█████████████████████| 10000/10000 [00:00<00:00, 449174.75 examples/s]
+Map:   0%|                                                          | 0/8000 [00:00<?, ? examples/s]/Users/justn/Library/Caches/pypoetry/virtualenvs/genai-detect-distilroberta-ZN1zM0B8-py3.11/lib/python3.11/site-packages/transformers/tokenization_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+Map: 100%|█████████████████████████████████████████████| 8000/8000 [00:05<00:00, 1547.44 examples/s]
+Map: 100%|█████████████████████████████████████████████| 2000/2000 [00:01<00:00, 1527.30 examples/s]
+/Users/justn/Library/Caches/pypoetry/virtualenvs/genai-detect-distilroberta-ZN1zM0B8-py3.11/lib/python3.11/site-packages/lightning/pytorch/callbacks/model_checkpoint.py:654: Checkpoint directory /Users/justn/genai-detect-distilroberta/checkpoints exists and is not empty.
+
+  | Name          | Type                               | Params | Mode
+-----------------------------------------------------------------------------
+0 | model         | PeftModelForSequenceClassification | 66.5 M | train
+1 | metrics       | MetricCollection                   | 0      | train
+2 | train_metrics | MetricCollection                   | 0      | train
+3 | valid_metrics | MetricCollection                   | 0      | train
+4 | test_metrics  | MetricCollection                   | 0      | train
+-----------------------------------------------------------------------------
+702 K     Trainable params
+65.8 M    Non-trainable params
+66.5 M    Total params
+265.943   Total estimated model params size (MB)
+206       Modules in train mode
+98        Modules in eval mode
+Epoch 0:   2%| | 15/667 [00:09<06:39,  1.63it/s, v_num=qtbh, train_BinaryAccuracy=0.667, train_Binar
+/Users/justn/Library/Caches/pypoetry/virtualenvs/genai-detect-distilroberta-ZN1zM0B8-py3.11/lib/python3.11/site-packages/torch/amp/autocast_mode.py:265: UserWarning: User provided device_type of 'cuda', but CUDA is not available. Disabling
+  warnings.warn(
+
+Detected KeyboardInterrupt, attempting graceful shutdown ...

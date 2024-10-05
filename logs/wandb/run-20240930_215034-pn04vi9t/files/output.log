@@ -1,0 +1,169 @@
+Casting to class labels: 100%|████████████████████████████████████████████████████| 10000/10000 [00:00<00:00, 427972.74 examples/s]
+Map:   0%|                                                                                         | 0/8000 [00:00<?, ? examples/s]/Users/justn/Library/Caches/pypoetry/virtualenvs/genai-detect-distilroberta-ZN1zM0B8-py3.11/lib/python3.11/site-packages/transformers/tokenization_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+/Users/justn/Library/Caches/pypoetry/virtualenvs/genai-detect-distilroberta-ZN1zM0B8-py3.11/lib/python3.11/site-packages/transformers/convert_slow_tokenizer.py:551: UserWarning: The sentencepiece tokenizer that you are converting to a fast tokenizer uses the byte fallback option which is not implemented in the fast tokenizers. In practice this means that the fast version of the tokenizer can produce unknown tokens whereas the sentencepiece version would have converted these unknown tokens into a sequence of byte tokens matching the original piece of text.
+  warnings.warn(
+Asking to truncate to max_length but no maximum length is provided and the model has no predefined maximum length. Default to no truncation.
+Map: 100%|█████████████████████████████████████████████████████████████████████████████| 8000/8000 [00:10<00:00, 764.38 examples/s]
+Map:   0%|                                                                                         | 0/2000 [00:00<?, ? examples/s]Asking to truncate to max_length but no maximum length is provided and the model has no predefined maximum length. Default to no truncation.
+Map: 100%|█████████████████████████████████████████████████████████████████████████████| 2000/2000 [00:02<00:00, 675.86 examples/s]
+/Users/justn/Library/Caches/pypoetry/virtualenvs/genai-detect-distilroberta-ZN1zM0B8-py3.11/lib/python3.11/site-packages/lightning/pytorch/callbacks/model_checkpoint.py:654: Checkpoint directory /Users/justn/genai-detect-distilroberta/checkpoints exists and is not empty.
+
+  | Name          | Type                               | Params | Mode
+-----------------------------------------------------------------------------
+0 | model         | PeftModelForSequenceClassification | 184 M  | train
+1 | metrics       | MetricCollection                   | 0      | train
+2 | train_metrics | MetricCollection                   | 0      | train
+3 | valid_metrics | MetricCollection                   | 0      | train
+4 | test_metrics  | MetricCollection                   | 0      | train
+-----------------------------------------------------------------------------
+148 K     Trainable params
+184 M     Non-trainable params
+184 M     Total params
+738.291   Total estimated model params size (MB)
+264       Modules in train mode
+244       Modules in eval mode
+Epoch 0:   0%|                                                                                             | 0/667 [00:00<?, ?it/s]
+/Users/justn/Library/Caches/pypoetry/virtualenvs/genai-detect-distilroberta-ZN1zM0B8-py3.11/lib/python3.11/site-packages/torch/amp/autocast_mode.py:265: UserWarning: User provided device_type of 'cuda', but CUDA is not available. Disabling
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/justn/genai-detect-distilroberta/trainer.py", line 152, in <module>
+    CLI(train, as_positional=False)
+  File "/Users/justn/Library/Caches/pypoetry/virtualenvs/genai-detect-distilroberta-ZN1zM0B8-py3.11/lib/python3.11/site-packages/jsonargparse/_cli.py", line 96, in CLI
+    return _run_component(components, init)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/justn/Library/Caches/pypoetry/virtualenvs/genai-detect-distilroberta-ZN1zM0B8-py3.11/lib/python3.11/site-packages/jsonargparse/_cli.py", line 204, in _run_component
+    return component(**cfg)
+           ^^^^^^^^^^^^^^^^
+  File "/Users/justn/genai-detect-distilroberta/trainer.py", line 139, in train
+    lit_trainer.fit(model=lit_module, datamodule=lit_datamodule)
+  File "/Users/justn/Library/Caches/pypoetry/virtualenvs/genai-detect-distilroberta-ZN1zM0B8-py3.11/lib/python3.11/site-packages/lightning/pytorch/trainer/trainer.py", line 538, in fit
+    call._call_and_handle_interrupt(
+  File "/Users/justn/Library/Caches/pypoetry/virtualenvs/genai-detect-distilroberta-ZN1zM0B8-py3.11/lib/python3.11/site-packages/lightning/pytorch/trainer/call.py", line 47, in _call_and_handle_interrupt
+    return trainer_fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/justn/Library/Caches/pypoetry/virtualenvs/genai-detect-distilroberta-ZN1zM0B8-py3.11/lib/python3.11/site-packages/lightning/pytorch/trainer/trainer.py", line 574, in _fit_impl
+    self._run(model, ckpt_path=ckpt_path)
+  File "/Users/justn/Library/Caches/pypoetry/virtualenvs/genai-detect-distilroberta-ZN1zM0B8-py3.11/lib/python3.11/site-packages/lightning/pytorch/trainer/trainer.py", line 981, in _run
+    results = self._run_stage()
+              ^^^^^^^^^^^^^^^^^
+  File "/Users/justn/Library/Caches/pypoetry/virtualenvs/genai-detect-distilroberta-ZN1zM0B8-py3.11/lib/python3.11/site-packages/lightning/pytorch/trainer/trainer.py", line 1025, in _run_stage
+    self.fit_loop.run()
+  File "/Users/justn/Library/Caches/pypoetry/virtualenvs/genai-detect-distilroberta-ZN1zM0B8-py3.11/lib/python3.11/site-packages/lightning/pytorch/loops/fit_loop.py", line 205, in run
+    self.advance()
+  File "/Users/justn/Library/Caches/pypoetry/virtualenvs/genai-detect-distilroberta-ZN1zM0B8-py3.11/lib/python3.11/site-packages/lightning/pytorch/loops/fit_loop.py", line 363, in advance
+    self.epoch_loop.run(self._data_fetcher)
+  File "/Users/justn/Library/Caches/pypoetry/virtualenvs/genai-detect-distilroberta-ZN1zM0B8-py3.11/lib/python3.11/site-packages/lightning/pytorch/loops/training_epoch_loop.py", line 140, in run
+    self.advance(data_fetcher)
+  File "/Users/justn/Library/Caches/pypoetry/virtualenvs/genai-detect-distilroberta-ZN1zM0B8-py3.11/lib/python3.11/site-packages/lightning/pytorch/loops/training_epoch_loop.py", line 250, in advance
+    batch_output = self.automatic_optimization.run(trainer.optimizers[0], batch_idx, kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/justn/Library/Caches/pypoetry/virtualenvs/genai-detect-distilroberta-ZN1zM0B8-py3.11/lib/python3.11/site-packages/lightning/pytorch/loops/optimization/automatic.py", line 190, in run
+    self._optimizer_step(batch_idx, closure)
+  File "/Users/justn/Library/Caches/pypoetry/virtualenvs/genai-detect-distilroberta-ZN1zM0B8-py3.11/lib/python3.11/site-packages/lightning/pytorch/loops/optimization/automatic.py", line 268, in _optimizer_step
+    call._call_lightning_module_hook(
+  File "/Users/justn/Library/Caches/pypoetry/virtualenvs/genai-detect-distilroberta-ZN1zM0B8-py3.11/lib/python3.11/site-packages/lightning/pytorch/trainer/call.py", line 167, in _call_lightning_module_hook
+    output = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/Users/justn/Library/Caches/pypoetry/virtualenvs/genai-detect-distilroberta-ZN1zM0B8-py3.11/lib/python3.11/site-packages/lightning/pytorch/core/module.py", line 1306, in optimizer_step
+    optimizer.step(closure=optimizer_closure)
+  File "/Users/justn/Library/Caches/pypoetry/virtualenvs/genai-detect-distilroberta-ZN1zM0B8-py3.11/lib/python3.11/site-packages/lightning/pytorch/core/optimizer.py", line 153, in step
+    step_output = self._strategy.optimizer_step(self._optimizer, closure, **kwargs)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/justn/Library/Caches/pypoetry/virtualenvs/genai-detect-distilroberta-ZN1zM0B8-py3.11/lib/python3.11/site-packages/lightning/pytorch/strategies/strategy.py", line 238, in optimizer_step
+    return self.precision_plugin.optimizer_step(optimizer, model=model, closure=closure, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/justn/Library/Caches/pypoetry/virtualenvs/genai-detect-distilroberta-ZN1zM0B8-py3.11/lib/python3.11/site-packages/lightning/pytorch/plugins/precision/amp.py", line 78, in optimizer_step
+    closure_result = closure()
+                     ^^^^^^^^^
+  File "/Users/justn/Library/Caches/pypoetry/virtualenvs/genai-detect-distilroberta-ZN1zM0B8-py3.11/lib/python3.11/site-packages/lightning/pytorch/loops/optimization/automatic.py", line 144, in __call__
+    self._result = self.closure(*args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/justn/Library/Caches/pypoetry/virtualenvs/genai-detect-distilroberta-ZN1zM0B8-py3.11/lib/python3.11/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/justn/Library/Caches/pypoetry/virtualenvs/genai-detect-distilroberta-ZN1zM0B8-py3.11/lib/python3.11/site-packages/lightning/pytorch/loops/optimization/automatic.py", line 129, in closure
+    step_output = self._step_fn()
+                  ^^^^^^^^^^^^^^^
+  File "/Users/justn/Library/Caches/pypoetry/virtualenvs/genai-detect-distilroberta-ZN1zM0B8-py3.11/lib/python3.11/site-packages/lightning/pytorch/loops/optimization/automatic.py", line 317, in _training_step
+    training_step_output = call._call_strategy_hook(trainer, "training_step", *kwargs.values())
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/justn/Library/Caches/pypoetry/virtualenvs/genai-detect-distilroberta-ZN1zM0B8-py3.11/lib/python3.11/site-packages/lightning/pytorch/trainer/call.py", line 319, in _call_strategy_hook
+    output = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/Users/justn/Library/Caches/pypoetry/virtualenvs/genai-detect-distilroberta-ZN1zM0B8-py3.11/lib/python3.11/site-packages/lightning/pytorch/strategies/strategy.py", line 390, in training_step
+    return self.lightning_module.training_step(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/justn/genai-detect-distilroberta/module.py", line 71, in training_step
+    outputs = self.model(
+              ^^^^^^^^^^^
+  File "/Users/justn/Library/Caches/pypoetry/virtualenvs/genai-detect-distilroberta-ZN1zM0B8-py3.11/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/justn/Library/Caches/pypoetry/virtualenvs/genai-detect-distilroberta-ZN1zM0B8-py3.11/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/justn/Library/Caches/pypoetry/virtualenvs/genai-detect-distilroberta-ZN1zM0B8-py3.11/lib/python3.11/site-packages/peft/peft_model.py", line 1379, in forward
+    return self.base_model(
+           ^^^^^^^^^^^^^^^^
+  File "/Users/justn/Library/Caches/pypoetry/virtualenvs/genai-detect-distilroberta-ZN1zM0B8-py3.11/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/justn/Library/Caches/pypoetry/virtualenvs/genai-detect-distilroberta-ZN1zM0B8-py3.11/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/justn/Library/Caches/pypoetry/virtualenvs/genai-detect-distilroberta-ZN1zM0B8-py3.11/lib/python3.11/site-packages/peft/tuners/tuners_utils.py", line 188, in forward
+    return self.model.forward(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/justn/Library/Caches/pypoetry/virtualenvs/genai-detect-distilroberta-ZN1zM0B8-py3.11/lib/python3.11/site-packages/transformers/models/deberta_v2/modeling_deberta_v2.py", line 1297, in forward
+    outputs = self.deberta(
+              ^^^^^^^^^^^^^
+  File "/Users/justn/Library/Caches/pypoetry/virtualenvs/genai-detect-distilroberta-ZN1zM0B8-py3.11/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/justn/Library/Caches/pypoetry/virtualenvs/genai-detect-distilroberta-ZN1zM0B8-py3.11/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/justn/Library/Caches/pypoetry/virtualenvs/genai-detect-distilroberta-ZN1zM0B8-py3.11/lib/python3.11/site-packages/transformers/models/deberta_v2/modeling_deberta_v2.py", line 1063, in forward
+    encoder_outputs = self.encoder(
+                      ^^^^^^^^^^^^^
+  File "/Users/justn/Library/Caches/pypoetry/virtualenvs/genai-detect-distilroberta-ZN1zM0B8-py3.11/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/justn/Library/Caches/pypoetry/virtualenvs/genai-detect-distilroberta-ZN1zM0B8-py3.11/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/justn/Library/Caches/pypoetry/virtualenvs/genai-detect-distilroberta-ZN1zM0B8-py3.11/lib/python3.11/site-packages/transformers/models/deberta_v2/modeling_deberta_v2.py", line 507, in forward
+    output_states = layer_module(
+                    ^^^^^^^^^^^^^
+  File "/Users/justn/Library/Caches/pypoetry/virtualenvs/genai-detect-distilroberta-ZN1zM0B8-py3.11/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/justn/Library/Caches/pypoetry/virtualenvs/genai-detect-distilroberta-ZN1zM0B8-py3.11/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/justn/Library/Caches/pypoetry/virtualenvs/genai-detect-distilroberta-ZN1zM0B8-py3.11/lib/python3.11/site-packages/transformers/models/deberta_v2/modeling_deberta_v2.py", line 355, in forward
+    attention_output = self.attention(
+                       ^^^^^^^^^^^^^^^
+  File "/Users/justn/Library/Caches/pypoetry/virtualenvs/genai-detect-distilroberta-ZN1zM0B8-py3.11/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/justn/Library/Caches/pypoetry/virtualenvs/genai-detect-distilroberta-ZN1zM0B8-py3.11/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/justn/Library/Caches/pypoetry/virtualenvs/genai-detect-distilroberta-ZN1zM0B8-py3.11/lib/python3.11/site-packages/transformers/models/deberta_v2/modeling_deberta_v2.py", line 286, in forward
+    self_output = self.self(
+                  ^^^^^^^^^^
+  File "/Users/justn/Library/Caches/pypoetry/virtualenvs/genai-detect-distilroberta-ZN1zM0B8-py3.11/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/justn/Library/Caches/pypoetry/virtualenvs/genai-detect-distilroberta-ZN1zM0B8-py3.11/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/justn/Library/Caches/pypoetry/virtualenvs/genai-detect-distilroberta-ZN1zM0B8-py3.11/lib/python3.11/site-packages/transformers/models/deberta_v2/modeling_deberta_v2.py", line 714, in forward
+    rel_att = self.disentangled_attention_bias(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/justn/Library/Caches/pypoetry/virtualenvs/genai-detect-distilroberta-ZN1zM0B8-py3.11/lib/python3.11/site-packages/transformers/models/deberta_v2/modeling_deberta_v2.py", line 788, in disentangled_attention_bias
+    c2p_att = torch.gather(
+              ^^^^^^^^^^^^^
+RuntimeError: MPS backend out of memory (MPS allocated: 14.88 GB, other allocations: 1.79 GB, max allowed: 18.13 GB). Tried to allocate 1.73 GB on private pool. Use PYTORCH_MPS_HIGH_WATERMARK_RATIO=0.0 to disable upper limit for memory allocations (may cause system failure).

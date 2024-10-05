@@ -1,0 +1,17 @@
+{"time":"2024-09-30T10:57:23.025482-04:00","level":"INFO","msg":"using version","core version":"0.18.2"}
+{"time":"2024-09-30T10:57:23.02565-04:00","level":"INFO","msg":"created symlink","path":"/Users/justn/genai-detect-distilroberta/logs/wandb/run-20240930_105723-aon0zxch/logs/debug-core.log"}
+{"time":"2024-09-30T10:57:23.030441-04:00","level":"INFO","msg":"created new stream","id":"aon0zxch"}
+{"time":"2024-09-30T10:57:23.030485-04:00","level":"INFO","msg":"stream: started","id":"aon0zxch"}
+{"time":"2024-09-30T10:57:23.030492-04:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"aon0zxch"}}
+{"time":"2024-09-30T10:57:23.030519-04:00","level":"INFO","msg":"handler: started","stream_id":{"value":"aon0zxch"}}
+{"time":"2024-09-30T10:57:23.030604-04:00","level":"INFO","msg":"sender: started","stream_id":{"value":"aon0zxch"}}
+{"time":"2024-09-30T10:57:23.342997-04:00","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-09-30T10:57:23.344539-04:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-09-30T10:58:44.115571-04:00","level":"INFO","msg":"stream: closing","id":"aon0zxch"}
+{"time":"2024-09-30T10:58:44.115713-04:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-09-30T10:58:44.115873-04:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-09-30T10:58:45.442375-04:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-09-30T10:58:45.853245-04:00","level":"INFO","msg":"sender: closed","stream_id":{"value":"aon0zxch"}}
+{"time":"2024-09-30T10:58:45.853215-04:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"aon0zxch"}}
+{"time":"2024-09-30T10:58:45.853233-04:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"aon0zxch"}}
+{"time":"2024-09-30T10:58:45.854051-04:00","level":"INFO","msg":"stream: closed","id":"aon0zxch"}

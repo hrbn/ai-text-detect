@@ -1,0 +1,40 @@
+{"time":"2024-09-30T14:35:11.214593-04:00","level":"INFO","msg":"using version","core version":"0.18.2"}
+{"time":"2024-09-30T14:35:11.214638-04:00","level":"INFO","msg":"created symlink","path":"/Users/justn/genai-detect-distilroberta/logs/wandb/run-20240930_143511-scrrau9e/logs/debug-core.log"}
+{"time":"2024-09-30T14:35:11.222997-04:00","level":"INFO","msg":"created new stream","id":"scrrau9e"}
+{"time":"2024-09-30T14:35:11.223108-04:00","level":"INFO","msg":"stream: started","id":"scrrau9e"}
+{"time":"2024-09-30T14:35:11.223122-04:00","level":"INFO","msg":"sender: started","stream_id":{"value":"scrrau9e"}}
+{"time":"2024-09-30T14:35:11.223113-04:00","level":"INFO","msg":"handler: started","stream_id":{"value":"scrrau9e"}}
+{"time":"2024-09-30T14:35:11.223298-04:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"scrrau9e"}}
+{"time":"2024-09-30T14:35:11.541857-04:00","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-09-30T14:35:11.543578-04:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-09-30T15:05:54.919889-04:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/uitsnf/ai-text-detect/scrrau9e/file_stream\": read tcp 10.0.1.20:56170->35.186.228.49:443: read: connection reset by peer"}
+{"time":"2024-09-30T15:23:42.538663-04:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": read tcp 10.0.1.20:54772->35.186.228.49:443: read: operation timed out"}
+{"time":"2024-09-30T15:42:51.831988-04:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": read tcp 10.0.1.20:56282->35.186.228.49:443: read: operation timed out"}
+{"time":"2024-09-30T15:45:18.02845-04:00","level":"INFO","msg":"stream: closing","id":"scrrau9e"}
+{"time":"2024-09-30T15:45:18.0286-04:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-09-30T15:45:18.323606-04:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-09-30T15:45:18.762145-04:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-09-30T15:45:19.084785-04:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"scrrau9e"}}
+{"time":"2024-09-30T15:45:19.0848-04:00","level":"INFO","msg":"sender: closed","stream_id":{"value":"scrrau9e"}}
+{"time":"2024-09-30T15:45:19.084763-04:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"scrrau9e"}}
+{"time":"2024-09-30T15:45:19.085503-04:00","level":"INFO","msg":"stream: closed","id":"scrrau9e"}
+{"time":"2024-09-30T15:45:19.085935-04:00","level":"ERROR","msg":"runwork: ignoring record after close","work":{"Record":{"RecordType":{"Request":{"RequestType":{"Keepalive":{}}}},"control":{"local":true,"connection_id":"127.0.0.1:54770"},"_info":{"stream_id":"scrrau9e"}}}}
+{"time":"2024-09-30T15:45:19.089021-04:00","level":"ERROR","msg":"runwork: ignoring record after close","work":{"Record":{"RecordType":{"Request":{"RequestType":{"Keepalive":{}}}},"control":{"local":true,"connection_id":"127.0.0.1:54770"},"_info":{"stream_id":"scrrau9e"}}}}
+{"time":"2024-09-30T15:45:19.089097-04:00","level":"ERROR","msg":"runwork: ignoring record after close","work":{"Record":{"RecordType":{"Request":{"RequestType":{"Keepalive":{}}}},"control":{"local":true,"connection_id":"127.0.0.1:54770"},"_info":{"stream_id":"scrrau9e"}}}}
+{"time":"2024-09-30T15:45:19.089134-04:00","level":"ERROR","msg":"runwork: ignoring record after close","work":{"Record":{"RecordType":{"Request":{"RequestType":{"Keepalive":{}}}},"control":{"local":true,"connection_id":"127.0.0.1:54770"},"_info":{"stream_id":"scrrau9e"}}}}
+{"time":"2024-09-30T15:45:19.089176-04:00","level":"ERROR","msg":"runwork: ignoring record after close","work":{"Record":{"RecordType":{"Request":{"RequestType":{"Keepalive":{}}}},"control":{"local":true,"connection_id":"127.0.0.1:54770"},"_info":{"stream_id":"scrrau9e"}}}}
+{"time":"2024-09-30T15:45:19.089207-04:00","level":"ERROR","msg":"runwork: ignoring record after close","work":{"Record":{"RecordType":{"Request":{"RequestType":{"Keepalive":{}}}},"control":{"local":true,"connection_id":"127.0.0.1:54770"},"_info":{"stream_id":"scrrau9e"}}}}
+{"time":"2024-09-30T15:45:19.089267-04:00","level":"ERROR","msg":"runwork: ignoring record after close","work":{"Record":{"RecordType":{"Request":{"RequestType":{"Keepalive":{}}}},"control":{"local":true,"connection_id":"127.0.0.1:54770"},"_info":{"stream_id":"scrrau9e"}}}}
+{"time":"2024-09-30T15:45:19.089295-04:00","level":"ERROR","msg":"runwork: ignoring record after close","work":{"Record":{"RecordType":{"Request":{"RequestType":{"Keepalive":{}}}},"control":{"local":true,"connection_id":"127.0.0.1:54770"},"_info":{"stream_id":"scrrau9e"}}}}
+{"time":"2024-09-30T15:45:19.089323-04:00","level":"ERROR","msg":"runwork: ignoring record after close","work":{"Record":{"RecordType":{"Request":{"RequestType":{"Keepalive":{}}}},"control":{"local":true,"connection_id":"127.0.0.1:54770"},"_info":{"stream_id":"scrrau9e"}}}}
+{"time":"2024-09-30T15:45:19.089352-04:00","level":"ERROR","msg":"runwork: ignoring record after close","work":{"Record":{"RecordType":{"Request":{"RequestType":{"Keepalive":{}}}},"control":{"local":true,"connection_id":"127.0.0.1:54770"},"_info":{"stream_id":"scrrau9e"}}}}
+{"time":"2024-09-30T15:45:19.089378-04:00","level":"ERROR","msg":"runwork: ignoring record after close","work":{"Record":{"RecordType":{"Request":{"RequestType":{"Keepalive":{}}}},"control":{"local":true,"connection_id":"127.0.0.1:54770"},"_info":{"stream_id":"scrrau9e"}}}}
+{"time":"2024-09-30T15:45:19.089405-04:00","level":"ERROR","msg":"runwork: ignoring record after close","work":{"Record":{"RecordType":{"Request":{"RequestType":{"Keepalive":{}}}},"control":{"local":true,"connection_id":"127.0.0.1:54770"},"_info":{"stream_id":"scrrau9e"}}}}
+{"time":"2024-09-30T15:45:19.089429-04:00","level":"ERROR","msg":"runwork: ignoring record after close","work":{"Record":{"RecordType":{"Request":{"RequestType":{"Keepalive":{}}}},"control":{"local":true,"connection_id":"127.0.0.1:54770"},"_info":{"stream_id":"scrrau9e"}}}}
+{"time":"2024-09-30T15:45:19.089462-04:00","level":"ERROR","msg":"runwork: ignoring record after close","work":{"Record":{"RecordType":{"Request":{"RequestType":{"Keepalive":{}}}},"control":{"local":true,"connection_id":"127.0.0.1:54770"},"_info":{"stream_id":"scrrau9e"}}}}
+{"time":"2024-09-30T15:45:19.089487-04:00","level":"ERROR","msg":"runwork: ignoring record after close","work":{"Record":{"RecordType":{"Request":{"RequestType":{"Keepalive":{}}}},"control":{"local":true,"connection_id":"127.0.0.1:54770"},"_info":{"stream_id":"scrrau9e"}}}}
+{"time":"2024-09-30T15:45:19.089517-04:00","level":"ERROR","msg":"runwork: ignoring record after close","work":{"Record":{"RecordType":{"Request":{"RequestType":{"Keepalive":{}}}},"control":{"local":true,"connection_id":"127.0.0.1:54770"},"_info":{"stream_id":"scrrau9e"}}}}
+{"time":"2024-09-30T15:45:19.089543-04:00","level":"ERROR","msg":"runwork: ignoring record after close","work":{"Record":{"RecordType":{"Request":{"RequestType":{"Keepalive":{}}}},"control":{"local":true,"connection_id":"127.0.0.1:54770"},"_info":{"stream_id":"scrrau9e"}}}}
+{"time":"2024-09-30T15:45:19.089568-04:00","level":"ERROR","msg":"runwork: ignoring record after close","work":{"Record":{"RecordType":{"Request":{"RequestType":{"Keepalive":{}}}},"control":{"local":true,"connection_id":"127.0.0.1:54770"},"_info":{"stream_id":"scrrau9e"}}}}
+{"time":"2024-09-30T15:45:19.089592-04:00","level":"ERROR","msg":"runwork: ignoring record after close","work":{"Record":{"RecordType":{"Request":{"RequestType":{"Keepalive":{}}}},"control":{"local":true,"connection_id":"127.0.0.1:54770"},"_info":{"stream_id":"scrrau9e"}}}}
+{"time":"2024-09-30T15:45:19.089618-04:00","level":"ERROR","msg":"runwork: ignoring record after close","work":{"Record":{"RecordType":{"Request":{"RequestType":{"Keepalive":{}}}},"control":{"local":true,"connection_id":"127.0.0.1:54770"},"_info":{"stream_id":"scrrau9e"}}}}

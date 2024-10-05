@@ -1,0 +1,39 @@
+Casting to class labels: 100%|█████████████████████| 10000/10000 [00:00<00:00, 541626.83 examples/s]
+Map:   0%|                                                          | 0/8000 [00:00<?, ? examples/s]/Users/justn/Library/Caches/pypoetry/virtualenvs/ai-text-detect-3ocuaAWT-py3.11/lib/python3.11/site-packages/transformers/tokenization_utils_base.py:1617: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be deprecated in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+Map: 100%|█████████████████████████████████████████████| 8000/8000 [00:04<00:00, 1672.50 examples/s]
+Traceback (most recent call last):
+  File "/Users/justn/ai-text-detect/trainer.py", line 151, in <module>
+    CLI(train, as_positional=False)
+  File "/Users/justn/Library/Caches/pypoetry/virtualenvs/ai-text-detect-3ocuaAWT-py3.11/lib/python3.11/site-packages/jsonargparse/_cli.py", line 96, in CLI
+    return _run_component(components, init)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/justn/Library/Caches/pypoetry/virtualenvs/ai-text-detect-3ocuaAWT-py3.11/lib/python3.11/site-packages/jsonargparse/_cli.py", line 204, in _run_component
+    return component(**cfg)
+           ^^^^^^^^^^^^^^^^
+  File "/Users/justn/ai-text-detect/trainer.py", line 138, in train
+    lit_trainer.fit(model=lit_module, datamodule=lit_datamodule)
+  File "/Users/justn/Library/Caches/pypoetry/virtualenvs/ai-text-detect-3ocuaAWT-py3.11/lib/python3.11/site-packages/lightning/pytorch/trainer/trainer.py", line 538, in fit
+    call._call_and_handle_interrupt(
+  File "/Users/justn/Library/Caches/pypoetry/virtualenvs/ai-text-detect-3ocuaAWT-py3.11/lib/python3.11/site-packages/lightning/pytorch/trainer/call.py", line 47, in _call_and_handle_interrupt
+    return trainer_fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/justn/Library/Caches/pypoetry/virtualenvs/ai-text-detect-3ocuaAWT-py3.11/lib/python3.11/site-packages/lightning/pytorch/trainer/trainer.py", line 574, in _fit_impl
+    self._run(model, ckpt_path=ckpt_path)
+  File "/Users/justn/Library/Caches/pypoetry/virtualenvs/ai-text-detect-3ocuaAWT-py3.11/lib/python3.11/site-packages/lightning/pytorch/trainer/trainer.py", line 943, in _run
+    call._call_setup_hook(self)  # allow user to set up LightningModule in accelerator environment
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/justn/Library/Caches/pypoetry/virtualenvs/ai-text-detect-3ocuaAWT-py3.11/lib/python3.11/site-packages/lightning/pytorch/trainer/call.py", line 102, in _call_setup_hook
+    _call_lightning_datamodule_hook(trainer, "setup", stage=fn)
+  File "/Users/justn/Library/Caches/pypoetry/virtualenvs/ai-text-detect-3ocuaAWT-py3.11/lib/python3.11/site-packages/lightning/pytorch/trainer/call.py", line 189, in _call_lightning_datamodule_hook
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/justn/ai-text-detect/datamodule.py", line 97, in setup
+    self.train_data.set_format("torch", columns=self.columns)
+  File "/Users/justn/Library/Caches/pypoetry/virtualenvs/ai-text-detect-3ocuaAWT-py3.11/lib/python3.11/site-packages/datasets/fingerprint.py", line 442, in wrapper
+    out = func(dataset, *args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/justn/Library/Caches/pypoetry/virtualenvs/ai-text-detect-3ocuaAWT-py3.11/lib/python3.11/site-packages/datasets/arrow_dataset.py", line 2521, in set_format
+    missing_columns = set(columns) - set(self._data.column_names)
+                      ^^^^^^^^^^^^
+TypeError: unhashable type: 'list'
