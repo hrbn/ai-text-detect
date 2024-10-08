@@ -21,8 +21,7 @@ from config import Config, DataModuleConfig, ModuleConfig, TrainerConfig
 def create_dirs(dirs: list) -> None:
     """Create directories if they do not exist"""
     for d in dirs:
-        if not os.path.isdir(d):
-            os.mkdir(d)
+        os.makedirs(d, exist_ok=True)
 
 
 # Configuration variables
@@ -90,29 +89,19 @@ def train(
     logger = WandbLogger(project="ai-text-detect", save_dir=log_dir, log_model="all")
 
     # Setup callbacks based on performance flag
-    if perf:
-        callbacks = [
-            ModelCheckpoint(
-                dirpath=ckpt_dir,
-                save_top_k=1,
-                monitor="val_loss",
-                mode="min",
-                auto_insert_metric_name=False,
-                filename="best-{val_loss:.3f}",
-            ),
-        ]
-    else:
-        callbacks = [
-            EarlyStopping(monitor="val_loss", mode="min", patience=3),
-            ModelCheckpoint(
-                dirpath=ckpt_dir,
-                save_top_k=1,
-                monitor="val_loss",
-                mode="min",
-                auto_insert_metric_name=False,
-                filename="best-{val_loss:.3f}",
-            ),
-        ]
+    callbacks = [
+        ModelCheckpoint(
+            dirpath=ckpt_dir,
+            save_top_k=1,
+            monitor="val_loss",
+            mode="min",
+            auto_insert_metric_name=False,
+            filename="best-{val_loss:.3f}",
+        ),
+    ]
+    if not perf:
+        callbacks.append(EarlyStopping(monitor="val_loss", mode="min", patience=3))
+
 
     # Profiler setup
     profiler = PyTorchProfiler(dirpath=prof_dir) if profile else None
