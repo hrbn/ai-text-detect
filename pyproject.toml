@@ -21,6 +21,8 @@ pip = "^24.2"
 ipykernel = "^6.29.5"
 flask = "^3.0.3"
 wandb = "^0.18.2"
+kaggle = "^1.6.17"
+seaborn = "^0.13.2"
 
 [build-system]
 requires = ["poetry-core"]

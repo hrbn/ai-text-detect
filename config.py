@@ -38,9 +38,9 @@ class ModuleConfig:
 
 @dataclass
 class DataModuleConfig:
-    dataset_path: str = "data/sample_10k.csv"
+    dataset_path: str = "data/sample.csv"
     batch_size: int = 12
-    train_size: float = 0.8
+    train_size: float = 0.99
     num_workers: int = 4
 
 
@@ -50,6 +50,6 @@ class TrainerConfig:
     devices: Union[int, str] = "auto"
     strategy: str = "auto"
     precision: Optional[str] = "16-mixed"
-    max_epochs: int = 5
-    val_check_interval: int = 300
+    max_epochs: int = 1
+    val_check_interval: int = 500
     check_val_every_n_epoch: Optional[int] = None
