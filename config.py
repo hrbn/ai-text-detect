@@ -38,9 +38,9 @@ class ModuleConfig:
 
 @dataclass
 class DataModuleConfig:
-    dataset_path: str = "data/sample.csv"
+    dataset_path: str = "data/sample_100k.csv"
     batch_size: int = 12
-    train_size: float = 0.99
+    train_size: float = 0.975
     num_workers: int = 4
 
 
