@@ -1,6 +1,6 @@
 # Run 'make help' for usage information
 
-SHELL := /usr/bin/env zsh
+SHELL := /bin/sh
 
 DIST_DIR := dist
 APP_DIR := app
@@ -27,8 +27,8 @@ train:  ## Train the model
 clean:  ## Clean up files from prior builds
 	mkdir -p $(DIST_DIR)
 
-	if command -v trash > /dev/null; then \
-		trash $(DIST_DIR)/* > /dev/null; \
+	@if command -v trash > /dev/null; then \
+		trash $(DIST_DIR)/* > /dev/null 2>&1; \
 	else \
 		rm -rf $(DIST_DIR)/*; \
 	fi
